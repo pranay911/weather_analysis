@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="winter <= 0.5\ngini = 0.38\nsamples = 19\nvalue = [[12, 7]\n[8, 11]\n[17, 2]]", fillcolor="#ffffff"] ;
+1 [label="rain <= 0.5\ngini = 0.281\nsamples = 8\nvalue = [[3, 5]\n[8, 0]\n[6, 2]]", fillcolor="#f8decb"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="summer <= 0.5\ngini = 0.148\nsamples = 3\nvalue = [[3, 0]\n[3, 0]\n[1, 2]]", fillcolor="#efb286"] ;
+1 -> 2 ;
+3 [label="gini = 0.0\nsamples = 1\nvalue = [[1, 0]\n[1, 0]\n[1, 0]]", fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 2\nvalue = [[2, 0]\n[2, 0]\n[0, 2]]", fillcolor="#e58139"] ;
+2 -> 4 ;
+5 [label="gini = 0.0\nsamples = 5\nvalue = [[0, 5]\n[5, 0]\n[5, 0]]", fillcolor="#e58139"] ;
+1 -> 5 ;
+6 [label="rain <= 0.5\ngini = 0.099\nsamples = 11\nvalue = [[9, 2]\n[0, 11]\n[11, 0]]", fillcolor="#eca26d"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="gini = 0.0\nsamples = 9\nvalue = [[9, 0]\n[0, 9]\n[9, 0]]", fillcolor="#e58139"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 2\nvalue = [[0, 2]\n[0, 2]\n[2, 0]]", fillcolor="#e58139"] ;
+6 -> 8 ;
+}
